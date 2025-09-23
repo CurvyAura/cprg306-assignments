@@ -77,7 +77,7 @@ export default function ItemList() {
 
 
     return (
-        <div>
+        <ul>
             {items.map((item, index) => (
                 <Item
                     key={index}
@@ -86,6 +86,6 @@ export default function ItemList() {
                     category={item.category}
                 />
             ))}
-        </div>
+        </ul>
     )
 }
