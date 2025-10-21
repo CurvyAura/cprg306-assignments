@@ -21,15 +21,13 @@ export default function ItemList() {
                     type="button"
                     onClick={() => setSortBy("name")}
                     className={`py-1 px-3 rounded ${sortBy === "name" ? "bg-blue-600 text-white" : "bg-gray-600 text-white"}`}
-                >
-                Sort by Name</button>
+                >Sort by Name</button>
 
                 <button
                     type="button"
                     onClick={() => setSortBy("category")}
                     className={`py-1 px-3 rounded ${sortBy === "category" ? "bg-blue-600 text-white" : "bg-gray-600 text-white"}`}
-                >
-                Sort by Category</button>
+                >Sort by Category</button>
             </div>
 
             <ul>
