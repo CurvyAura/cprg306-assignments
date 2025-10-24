@@ -6,7 +6,7 @@ import Item from "./item";
 export default function ItemList({ items = [] }) {
     const [sortBy, setSortBy] = useState("name");
 
-    const sortedItems = useMemo(() => { // my existing code already creates a copy yay!
+    const sortedItems = useMemo(() => {
         const itemsCopy = [...items];
         if (sortBy === "quantity") return itemsCopy.sort((left, right) => left.quantity - right.quantity);
         return itemsCopy.sort((left, right) => left[sortBy].localeCompare(right[sortBy]));
