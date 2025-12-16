@@ -40,6 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# local firebase config
-utils/firebase.js
-firebase.js
+.vercel

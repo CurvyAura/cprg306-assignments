@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "encoding": "^0.1.13",
-    "firebase": "^12.5.0",
-    "next": "15.5.3",
+    "firebase": "^12.7.0",
+    "next": "^16.0.10",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
@@ -19,7 +19,7 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
-    "eslint-config-next": "15.5.3",
+    "eslint-config-next": "^16.0.10",
     "tailwindcss": "^4"
   }
 }
