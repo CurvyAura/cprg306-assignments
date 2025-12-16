@@ -30,16 +30,21 @@ export default function Page() {
     };
 
     const handleItemSelect = (item) => {
-        if (!item || !item.name) {
+        try {
+            if (!item || !item.name) {
+                setSelectedItemName("");
+                return;
+            }
+            let namePart = item.name.split(",")[0] || item.name;
+
+            namePart = namePart.replace(/[^A-Za-zÀ-ž\s]/g, "");
+            const cleaned = namePart.replace(/\s+/g, " ").trim();
+
+            setSelectedItemName(cleaned);
+        } catch (err) {
+            console.error("week-10 handleItemSelect error:", err);
             setSelectedItemName("");
-            return;
         }
-        let namePart = item.name.split(",")[0] || item.name;
-
-    namePart = namePart.replace(/[^A-Za-zÀ-ž\s]/g, "");
-        const cleaned = namePart.replace(/\s+/g, " ").trim();
-
-        setSelectedItemName(cleaned);
     };
 
     // Load items for user from Firestore and set component state
